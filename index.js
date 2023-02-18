@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors')
 connectToMongoose();
 const app = express()
-const port = 5000  //changes the port so because react  also run at 3000
+const port = process.env.PORT ||  5000  //changes the port so because react  also run at 3000
 
 app.use(express.json());
 app.use(cors());
